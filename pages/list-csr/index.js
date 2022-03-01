@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Center } from "..";
 
 export const PokemonCard = styled.div`
   border-radius: 10px;
@@ -24,8 +25,8 @@ export const PokemonCard = styled.div`
 `;
 
 export const PokemonList = styled.div`
-  width: 700px;
-  height: 600px;
+  width: 900px;
+  height: 400px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -51,21 +52,23 @@ const PokemonsCSR = () => {
 
   return (
     <>
-      <h1>POKÉMONS EN CSR</h1>
-      <PokemonList>
-        {pokemons &&
-          pokemons.map((pokemon) => (
-            <PokemonCard key={pokemon.id}>
-              <Image
-                src={pokemon.sprites.front_default}
-                alt={pokemon.forms.name}
-                width="200"
-                height="100"
-              />
-              <p>{pokemon.forms[0].name}</p>
-            </PokemonCard>
-          ))}
-      </PokemonList>
+      <Center>
+        <h1>POKÉMONS EN CSR</h1>
+        <PokemonList>
+          {pokemons &&
+            pokemons.map((pokemon) => (
+              <PokemonCard key={pokemon.id}>
+                <Image
+                  src={pokemon.sprites.front_default}
+                  alt={pokemon.forms.name}
+                  width="200"
+                  height="100"
+                />
+                <p>{pokemon.forms[0].name}</p>
+              </PokemonCard>
+            ))}
+        </PokemonList>
+      </Center>
     </>
   );
 };

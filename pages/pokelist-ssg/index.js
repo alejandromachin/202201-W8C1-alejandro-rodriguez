@@ -2,11 +2,12 @@ import Image from "next/image";
 import { Center } from "..";
 import { PokemonCard, PokemonList } from "../list-csr";
 
-const PokemonsSSR = ({ pokemonsAPI }) => {
+const PokemonsSSG = ({ pokemonsAPI }) => {
   return (
     <>
       <Center>
         <h1>POKÉMONS EN CSR</h1>
+
         <PokemonList>
           {pokemonsAPI &&
             pokemonsAPI.map((pokemon) => (
@@ -26,7 +27,7 @@ const PokemonsSSR = ({ pokemonsAPI }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch(process.env.NEXT_PUBLIC_MYPOKEAPI);
   const pokemonsAPI = await response.json();
 
@@ -35,4 +36,4 @@ export const getServerSideProps = async () => {
   };
 };
 
-export default PokemonsSSR;
+export default PokemonsSSG;
