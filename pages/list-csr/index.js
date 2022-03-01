@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const PokemonCard = styled.div`
+export const PokemonCard = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ const PokemonCard = styled.div`
   box-shadow: 2px 2px 31px 6px rgba(0, 0, 0, 0.48);
 `;
 
-const PokemonList = styled.div`
+export const PokemonList = styled.div`
   width: 700px;
   height: 600px;
   display: flex;
