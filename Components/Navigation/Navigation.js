@@ -11,7 +11,7 @@ const Navigation = () => {
           <Link href="/list-csr">POKEMONS</Link>
         </li>
         <li>
-          <Link href="/list-ssr">MIS POKÉMONS SSR</Link>
+          <Link href="/pokelist-ssr">MIS POKÉMONS SSR</Link>
         </li>
         <li>
           <Link href="/list-ssg">MIS POKÉMONS SSG</Link>
