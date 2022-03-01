@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["raw.githubusercontent.com", "media-exp1.licdn.com"],
+    domains: [
+      "raw.githubusercontent.com",
+      "media-exp1.licdn.com",
+      "upload.wikimedia.org",
+    ],
   },
   compiler: {
     styledComponents: true,
