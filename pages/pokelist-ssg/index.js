@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Center } from "..";
 import { PokemonCard, PokemonList } from "../list-csr";
 
@@ -7,7 +8,6 @@ const PokemonsSSG = ({ pokemonsAPI }) => {
     <>
       <Center>
         <h1>POKÉMONS EN CSR</h1>
-
         <PokemonList>
           {pokemonsAPI &&
             pokemonsAPI.map((pokemon) => (
@@ -18,6 +18,8 @@ const PokemonsSSG = ({ pokemonsAPI }) => {
                   width="200"
                   height="100"
                 />
+                <Link href={`/pokemonssg/${pokemon.id}`}>+INFO</Link>
+
                 <p>{pokemon.name}</p>
               </PokemonCard>
             ))}
